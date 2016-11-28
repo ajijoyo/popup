@@ -31,4 +31,6 @@ typedef void(^popUpHandler)();
 
 -(void)onConfirm:(popUpHandler)sender;
 -(void)onConfirm:(popUpHandler)confirm onCancel:(popUpHandler)cancel;
+-(void)withConfirm:(NSString*)titleConfirm onConfirm:(popUpHandler)sender;
+-(void)withConfirm:(NSString*)titleConfirm onConfirm:(popUpHandler)confirm withCancel:(NSString*)titleCancel  onCancel:(popUpHandler)cancel;
 @end

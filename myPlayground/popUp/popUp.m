@@ -31,16 +31,16 @@
             }
         }
         
-        self.backgroundColor = [[UIColor grayColor]colorWithAlphaComponent:0.2];
+//        self.backgroundColor = [[UIColor grayColor]colorWithAlphaComponent:0.2];
         
         CGFloat width = self.bounds.size.width - 32;
         baseView = [[UIView alloc]initWithFrame:CGRectMake((self.bounds.size.width - width) / 2, 0, width, 10)];
         baseView.layer.cornerRadius = 8;
         baseView.layer.backgroundColor = [UIColor whiteColor].CGColor;
-        baseView.layer.shadowColor = [UIColor grayColor].CGColor;
-        baseView.layer.shadowOffset = CGSizeMake(0.5, 2);
+        baseView.layer.shadowColor = [[UIColor blackColor] colorWithAlphaComponent:0.5].CGColor;
+        baseView.layer.shadowOffset = CGSizeMake(1, 1);
         baseView.layer.shadowOpacity = 1;
-        baseView.layer.shadowRadius = 3;
+        baseView.layer.shadowRadius = 90;
         [self addSubview:baseView];
         
         titleLabel = [UILabel new];
@@ -66,10 +66,10 @@
         confirmBttn.frame = CGRectMake(((widthBttn - 120)/ 2) + widthBttn, 0, 120, 0);
         confirmBttn.layer.cornerRadius = 8;
         confirmBttn.layer.backgroundColor = [UIColor redColor].CGColor;
-        confirmBttn.layer.shadowColor = [UIColor grayColor].CGColor;
-        confirmBttn.layer.shadowOffset = CGSizeMake(0.5, 0.5);
-        confirmBttn.layer.shadowOpacity = 1;
-        confirmBttn.layer.shadowRadius = 1;
+//        confirmBttn.layer.shadowColor = [UIColor grayColor].CGColor;
+//        confirmBttn.layer.shadowOffset = CGSizeMake(0.5, 0.5);
+//        confirmBttn.layer.shadowOpacity = 1;
+//        confirmBttn.layer.shadowRadius = 1;
         [baseView addSubview:confirmBttn];
         
         cancelBttn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -139,6 +139,17 @@
 
 -(CGRect)sizeFit:(NSString*)stringSize{
     return [stringSize boundingRectWithSize:CGSizeMake(baseView.bounds.size.width - 20, CGFLOAT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) attributes:nil context:nil];
+}
+
+-(void)withConfirm:(NSString *)titleConfirm onConfirm:(popUpHandler)sender{
+    [confirmBttn setTitle:titleConfirm forState:UIControlStateNormal];
+    [self onConfirm:sender];
+}
+
+-(void)withConfirm:(NSString *)titleConfirm onConfirm:(popUpHandler)confirm withCancel:(NSString *)titleCancel onCancel:(popUpHandler)cancel{
+    [confirmBttn setTitle:titleConfirm forState:UIControlStateNormal];
+    [cancelBttn setTitle:@"cancel" forState:UIControlStateNormal];
+    [self onConfirm:confirm onCancel:cancel];
 }
 
 -(void)onConfirm:(popUpHandler)sender{

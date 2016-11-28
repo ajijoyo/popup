@@ -16,9 +16,13 @@
 @implementation ViewController
 
 - (IBAction)showing:(id)sender {
-    [[popUp showMessage:@"hello\nlagi lagi coba\nlagi gak papa" withTitle:@"coba title"]onConfirm:^{
-        
-    } onCancel:nil];
+    [[popUp showMessage:@"hello\nlagi lagi coba\nlagi gak papa" withTitle:@"coba title"]
+     withConfirm:@"confirm" onConfirm:^{
+     
+     }withCancel:@"cancel" onCancel:^{
+     
+     }];
+     
 }
 
 - (void)viewDidLoad {
