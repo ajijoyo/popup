@@ -306,6 +306,7 @@
     popUp *pop = [popUp new];
     pop.messageString = message;
     [pop composeMessageView];
+    [pop startAnimationShadow];
     
     pop.alpha = 0;
     [UIView animateKeyframesWithDuration:defaultDuration delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubicPaced animations:^{
@@ -321,6 +322,7 @@
     pop.messageString = message;
     pop.titleString = title;
     [pop composeMessageView];
+    [pop startAnimationShadow];
     
     pop.alpha = 0;
     [UIView animateKeyframesWithDuration:defaultDuration delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubicPaced animations:^{
