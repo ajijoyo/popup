@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		894A923F1DEC7D370048B5A7 /* stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894A923E1DEC7D370048B5A7 /* stickers.xcassets */; };
 		D38D66241DEBE97000DAC0F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D38D66231DEBE97000DAC0F5 /* main.m */; };
 		D38D66271DEBE97000DAC0F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D38D66261DEBE97000DAC0F5 /* AppDelegate.m */; };
 		D38D662A1DEBE97000DAC0F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38D66291DEBE97000DAC0F5 /* ViewController.m */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		894A923E1DEC7D370048B5A7 /* stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = stickers.xcassets; path = ../../ios/Kapoocino/stickers.xcassets; sourceTree = "<group>"; };
 		D38D661F1DEBE97000DAC0F5 /* myPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38D66231DEBE97000DAC0F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D38D66251DEBE97000DAC0F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				D38D66291DEBE97000DAC0F5 /* ViewController.m */,
 				D38D662B1DEBE97000DAC0F5 /* Main.storyboard */,
 				D38D662E1DEBE97000DAC0F5 /* Assets.xcassets */,
+				894A923E1DEC7D370048B5A7 /* stickers.xcassets */,
 				D38D66301DEBE97000DAC0F5 /* LaunchScreen.storyboard */,
 				D38D66331DEBE97000DAC0F5 /* Info.plist */,
 				D38D66221DEBE97000DAC0F5 /* Supporting Files */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38D66321DEBE97000DAC0F5 /* LaunchScreen.storyboard in Resources */,
+				894A923F1DEC7D370048B5A7 /* stickers.xcassets in Resources */,
 				D38D662F1DEBE97000DAC0F5 /* Assets.xcassets in Resources */,
 				D38D662D1DEBE97000DAC0F5 /* Main.storyboard in Resources */,
 			);
@@ -314,6 +318,7 @@
 				D38D66381DEBE97000DAC0F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

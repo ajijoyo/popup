@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C492DBF6228DEE1E379BF13E2694D0F01CE644CC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C492DBF6228DEE1E379BF13E2694D0F01CE644CC" : 9223372036854775807,
+    "AE51E5A823D6FCE9CCDBDE30CD0F51DE0553CE5C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C327293E-9D81-444C-B9F3-9291CE7A29C1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C492DBF6228DEE1E379BF13E2694D0F01CE644CC" : "popup\/",
+    "AE51E5A823D6FCE9CCDBDE30CD0F51DE0553CE5C" : "ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "myPlayground",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "myPlayground.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/dev.api.kapoocino.com\/kapoocino\/client\/ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AE51E5A823D6FCE9CCDBDE30CD0F51DE0553CE5C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ajijoyo\/popup.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C492DBF6228DEE1E379BF13E2694D0F01CE644CC"
+    }
+  ]
+}
