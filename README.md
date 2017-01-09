@@ -28,5 +28,8 @@ for confirm show popup message
 
 [popUp stopProgress];
 ```
-
-feel free to pull request for add feature
+#note
+feel free to pull request for add new feature
+<dt>
+why im using objective-c?? so you can use this freely on swift 2.x or 3.x
+</dt>
