@@ -9,7 +9,7 @@ create popup message information need to be confirm, or cancel
 ```objective-c
 #import "popUp.h"
 
-for confirm or cancel show popup message
+//for confirm or cancel show popup message
 [[popUp showMessage:@"lorem ipsum\nipsum ipsum" withTitle:@"with title"]
      withConfirm:@"confirm" onConfirm:^{
      
@@ -17,7 +17,7 @@ for confirm or cancel show popup message
      
      }];
      
-for confirm show popup message  
+//for confirm show popup message  
 [[popUp showMessage:@"lorem ipsum\nipsum ipsum" withTitle:@"with title"]
      withConfirm:@"oke" onConfirm:^{
          
