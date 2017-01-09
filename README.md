@@ -4,6 +4,9 @@ create popup message information need to be confirm, or cancel
 ![alt text](https://github.com/ajijoyo/popup/blob/master/example.png)
 
 
+#installation
+just copy my folder popUp to your project and `import #popUp.h`
+
 #usage
 
 ```objective-c
