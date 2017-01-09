@@ -32,6 +32,8 @@
         }
         _isDismissAble = YES;
         index = 0;
+        
+        /* uncomment this when you have a image this for showprogress only
         images = @[[UIImage imageNamed:@"kaps_cooliest"],
                    [UIImage imageNamed:@"kaps_ghosting"],
                    [UIImage imageNamed:@"kaps_kiss"],
@@ -40,8 +42,9 @@
                    [UIImage imageNamed:@"kaps_spoiled"],
                    [UIImage imageNamed:@"kaps_wrong_sticker"],
                    ];
+         */
         
-//        self.backgroundColor = [[UIColor grayColor]colorWithAlphaComponent:0.2];
+        self.backgroundColor = [[UIColor grayColor]colorWithAlphaComponent:0.2];
         
         CGFloat width = self.bounds.size.width - 32;
         baseView = [[UIView alloc]initWithFrame:CGRectMake((self.bounds.size.width - width) / 2, 0, width, 10)];
@@ -50,7 +53,7 @@
         baseView.layer.shadowColor = [[UIColor blackColor] colorWithAlphaComponent:0.5].CGColor;
         baseView.layer.shadowOffset = CGSizeMake(1, 1);
         baseView.layer.shadowOpacity = 1;
-        baseView.layer.shadowRadius = 90;
+        baseView.layer.shadowRadius = 10;
         [self addSubview:baseView];
         
         titleLabel = [UILabel new];
@@ -78,10 +81,6 @@
         confirmBttn.frame = CGRectMake(((widthBttn - 120)/ 2) + widthBttn, 0, 120, 0);
         confirmBttn.layer.cornerRadius = 8;
         confirmBttn.layer.backgroundColor = [UIColor redColor].CGColor;
-//        confirmBttn.layer.shadowColor = [UIColor grayColor].CGColor;
-//        confirmBttn.layer.shadowOffset = CGSizeMake(0.5, 0.5);
-//        confirmBttn.layer.shadowOpacity = 1;
-//        confirmBttn.layer.shadowRadius = 1;
         [baseView addSubview:confirmBttn];
         
         cancelBttn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -196,7 +195,9 @@
     transition.type = kCATransitionFade;
     transition.subtype = kCATransitionFromBottom;
     [imageView.layer addAnimation:transition forKey:kCATransition];
-    imageView.image = images[index];
+    if (!images) {
+        imageView.image = images[index];
+    }
     [CATransaction commit];
     
     index = index < images.count - 1 ? index + 1 : 0;
@@ -212,7 +213,7 @@
 }
 
 -(CGRect)sizeFit:(NSString*)stringSize{
-    return [stringSize boundingRectWithSize:CGSizeMake(baseView.bounds.size.width - 20, CGFLOAT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) attributes:nil context:nil];
+    return [stringSize boundingRectWithSize:CGSizeMake(baseView.bounds.size.width - 20, CGFLOAT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) attributes:@{NSFontAttributeName:messageLabel.font} context:nil];
 }
 
 -(void)withConfirm:(NSString *)titleConfirm onConfirm:(popUpHandler)sender{
@@ -287,7 +288,6 @@
     pop.isDismissAble = NO;
     [pop setupForLoading];
     [pop startAnimationLoading];
-    [pop startAnimationShadow];
     /*
      use 'pop.customView' to custom your loading progress
      */
@@ -306,7 +306,6 @@
     popUp *pop = [popUp new];
     pop.messageString = message;
     [pop composeMessageView];
-    [pop startAnimationShadow];
     
     pop.alpha = 0;
     [UIView animateKeyframesWithDuration:defaultDuration delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubicPaced animations:^{
@@ -322,7 +321,6 @@
     pop.messageString = message;
     pop.titleString = title;
     [pop composeMessageView];
-    [pop startAnimationShadow];
     
     pop.alpha = 0;
     [UIView animateKeyframesWithDuration:defaultDuration delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubicPaced animations:^{

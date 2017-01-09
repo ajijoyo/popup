@@ -21,7 +21,7 @@
                                 <rect key="frame" x="277" y="285" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="showing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fgk-be-Pu0"/>
+                                    <action selector="showing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eut-wz-8P4"/>
                                 </connections>
                             </button>
                         </subviews>

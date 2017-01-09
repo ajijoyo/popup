@@ -16,16 +16,16 @@
 @implementation ViewController
 
 - (IBAction)showing:(id)sender {
-    [[popUp showMessage:@"hello\nlagi lagi coba\nlagi gak papa" withTitle:@"coba title"]
+    [[popUp showMessage:@"lorem ipsum\nipsum ipsum" withTitle:@"with title"]
      withConfirm:@"confirm" onConfirm:^{
-         [popUp showProgress];
          [self time];
      }withCancel:@"cancel" onCancel:^{
      
      }];
 }
-
+//
 -(void)time{
+    [popUp showProgress];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [popUp stopProgress];
     });
