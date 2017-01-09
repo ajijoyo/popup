@@ -17,10 +17,8 @@
 
 - (IBAction)showing:(id)sender {
     [[popUp showMessage:@"lorem ipsum\nipsum ipsum" withTitle:@"with title"]
-     withConfirm:@"confirm" onConfirm:^{
-         [self time];
-     }withCancel:@"cancel" onCancel:^{
-     
+     withConfirm:@"oke" onConfirm:^{
+         
      }];
 }
 //
@@ -33,7 +31,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     
 }
 
